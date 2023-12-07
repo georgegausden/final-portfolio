@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer base{
+  button{
+
+    @apply   md:w-8 lg:w-32 p-10 h-16 font-sans rounded-[12px] drop-shadow-2xl hover:scale-110 transition-transform ease-in-out duration-500; 
+  }
+  
+  header{
+    @apply flex justify-between px-5 text-black w-auto py-5 dark:text-white
+  }
+  
+  a{
+    @apply md:text-[20px] sm:text-[17px] !opacity-100 p-5
+  }
+
+  #textHeader{
+    @apply  underline underline-offset-8 hover:underline-offset-2 ease-in-out duration-500
+  }
+
+  #headerLink{
+    @apply text-sm text-black text-opacity-50 hover:text-opacity-100 transition duration-500 ease-in-out dark:text-white
+  }
+
+  main{
+    @apply h-auto w-screen bg-white
+  }
+
+  #boxes{
+    @apply bg-white col-span-2 row-auto w-10 h-10 flex
+    
+  }
+
+  #text{
+    @apply opacity-100 p-5 m-2
+  }
+
+  #project{
+    @apply bg-white w-auto aspect-video flex items-center justify-center 
+  }
+
+  #boxedImage{
+    @apply rounded-[12px] scale-[90%] shadow-inner-dark w-auto h-auto 
+  }
+
+  #blurchecker{
+    @apply hover:fill-green-800
+  }
+  
+  #project:hover #blurchecker {
+    @apply fill-green-600
+  }
+
+  #projectName{
+    @apply text-white text-xl  inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500 z-10
+  }
+  
+
+  #getInTouch{
+    @apply opacity-100 p-6 pb-0 font-bold text-4xl
+  }
+
+  #contactForm{
+    @apply  dark:bg-[#23282F] m-5 bg-white bg-opacity-30 rounded-[12px] p-2 border h-40 hover:border-purple-700 duration-1000 transition-colors ease-in-out
+  }
+
+  footer{
+    @apply dark:bg-[#23282F] dark:opacity-100 dark:shadow-inner-dark dark:border-orange-400 font-normal shadow-inner-light  bg-white m-5 w-auto bg-opacity-50 drop-shadow-2xl rounded-[12px] grid grid-flow-col lg:justify-start sm:align-middle text-center content-center 
+ 
+  }
+  
+  #logo{
+    @apply justify-center align-middle flex dark:stroke-white
+  }
+
+  #footerIcons{
+    @apply flex justify-center items-center dark:stroke-white
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
